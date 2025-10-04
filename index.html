@@ -1,0 +1,118 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coupled Minds Lab</title>
+  <meta name="description" content="Coupled Minds Lab — social neuroscience of conversation, alignment, and human–AI interaction.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="#top">Coupled Minds Lab</a>
+      <nav class="nav" id="nav">
+        <a href="#research">Research</a>
+        <a href="#people">People</a>
+        <a href="#publications">Publications</a>
+        <a href="#join">Join</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="menu" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <h1>Coupled Minds Lab</h1>
+        <p class="affil">Department of Psychology | Your University</p>
+        <p class="cta"><a href="#join" class="button">We are recruiting for Fall 2026 →</a></p>
+      </div>
+    </section>
+
+    <section id="research" class="section">
+      <div class="container">
+        <h2>Research</h2>
+        <p class="lede">How do minds align in conversation? How do we transmit thoughts from one brain to another? How do we coordinate behavior?</p>
+        <p>We study how people explore ideas, align opinions, and resolve conflict through conversation. Our work integrates <strong>fMRI hyperscanning</strong>, <strong>natural language processing</strong>, and <strong>computational modeling</strong> to understand how alignment emerges in real-world interactions and how this differs in human–AI dialogue.</p>
+        <p><a href="#publications" class="link">Learn more →</a></p>
+      </div>
+    </section>
+
+    <section id="people" class="section alt">
+      <div class="container">
+        <h2>People</h2>
+        <div class="grid">
+          <div class="card">
+            <img src="assets/img/pi.jpg" alt="PI headshot" onerror="this.style.display='none'">
+            <h3>Your Name, PhD</h3>
+            <p>Principal Investigator</p>
+            <p>Short bio: interests, methods, fun fact.</p>
+            <p><a href="mailto:you@example.com">email</a> · <a href="https://github.com/YOUR_GITHUB_USERNAME">website</a></p>
+          </div>
+          <!-- Add more people cards as needed -->
+        </div>
+        <p class="note">Under construction! We're building our team of students, postdocs, and collaborators.</p>
+      </div>
+    </section>
+
+    <section id="publications" class="section">
+      <div class="container">
+        <h2>Publications</h2>
+        <article class="pub">
+          <h3>A shared model-based linguistic space for transmitting thoughts from brain to brain in natural conversations</h3>
+          <p><em>Neuron</em>, 2024. <a href="https://doi.org/10.1016/j.neuron.2024.07.036" target="_blank" rel="noopener">DOI</a> · <a href="#" target="_blank" rel="noopener">PDF</a></p>
+        </article>
+        <article class="pub">
+          <h3>Shared functional specialization in transformer-based language models and the human brain</h3>
+          <p><em>Nature Communications</em>, 2024. <a href="https://www.nature.com/articles/s41467-024-49973-5" target="_blank" rel="noopener">DOI</a> · <a href="#" target="_blank" rel="noopener">PDF</a></p>
+        </article>
+        <p><a class="link" href="#" target="_blank">More publications →</a></p>
+      </div>
+    </section>
+
+    <section id="join" class="section alt">
+      <div class="container">
+        <h2>Join</h2>
+        <p>We are recruiting graduate students, postdocs, and undergraduate researchers excited about social neuroscience, language, and computation. Please read our recent publications and come prepared to discuss how you'd build on them.</p>
+        <p>Send a brief statement of interest and CV to <a href="mailto:you@example.com">you@example.com</a>.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <address>
+          PI: Your Name<br>
+          Email: <a href="mailto:you@example.com">you@example.com</a><br>
+          Office: Building/Room<br>
+          Your University<br>
+          City, State ZIP
+        </address>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="y"></span> Coupled Minds Lab</p>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
