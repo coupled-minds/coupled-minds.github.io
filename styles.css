@@ -87,3 +87,32 @@ a,
   color: var(--fg);
 }
 
+/* --- Alternating maroon sections --- */
+.section.alt {
+  background-color: var(--brand);  /* TAMU maroon background */
+  color: white;                    /* white text */
+}
+
+.section.alt h2,
+.section.alt a,
+.section.alt p,
+.section.alt .note {
+  color: white !important;
+}
+
+.section.alt a.link,
+.section.alt a.button {
+  color: white;
+  border-color: white;
+}
+
+.section.alt a.link:hover,
+.section.alt a.button:hover {
+  color: var(--accent);
+}
+
+/* Ensure cards inside maroon sections stand out */
+.section.alt .card {
+  background-color: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.2);
+}
