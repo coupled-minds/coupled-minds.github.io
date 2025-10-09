@@ -145,8 +145,8 @@ a,
 /* Circle photo, smaller but left-aligned */
 .card.person .portrait {
   flex-shrink: 0;
-  width: 160px;
-  height: 160px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
