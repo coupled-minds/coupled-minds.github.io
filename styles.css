@@ -1,13 +1,13 @@
 
 :root{
-  --bg:#ffffff;      /* background */
-  --fg:#111111;      /* text color */
-  --muted:#5e5e5e;   /* muted text */
-  --brand:#500000;   /* TAMU maroon */
-  --accent:#841617;  /* lighter maroon accent */
-  --card:#f8f8f8;    /* card backgrounds */
-  --alt:#f3f3f3;     /* alternating section background */
-  --line:#d6d6d6;    /* divider lines */
+  --bg:#ffffff;      /* page background */
+  --fg:#500000;      /* main text color (maroon) */
+  --muted:#7a7a7a;   /* gray subtext */
+  --brand:#500000;   /* TAMU maroon for links/buttons */
+  --accent:#841617;  /* slightly lighter maroon accent */
+  --card:#f9f9f9;    /* card backgrounds */
+  --alt:#f3f3f3;     /* alternating section bg */
+  --line:#dddddd;    /* divider lines */
   --max:900px;
 }
 *{box-sizing:border-box}
@@ -40,3 +40,50 @@ a:hover{text-decoration:underline}
   .hero{padding-top:64px}
   .hero h1{font-size:34px}
 }
+
+/* --- Navigation bar --- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: var(--brand);
+  border-bottom: none;
+}
+
+.site-header .brand,
+.site-header .nav a {
+  color: white !important;
+  font-weight: 600;
+}
+
+.site-header .nav a:hover {
+  text-decoration: underline;
+}
+
+/* --- Page background + text --- */
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
+/* --- Buttons and links --- */
+a,
+.button {
+  color: var(--brand);
+}
+
+.button {
+  background: var(--brand);
+  color: white;
+}
+
+.button:hover {
+  background: var(--accent);
+}
+
+/* --- Hero section cleanup --- */
+.hero {
+  background: var(--bg);
+  color: var(--fg);
+}
+
