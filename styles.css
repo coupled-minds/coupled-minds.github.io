@@ -119,9 +119,10 @@ a,
 
 
 .card img {
-  border-radius: 50%;
-  width: 160px;
-  height: 160px;
-  object-fit: cover;
-  margin: 0 auto 12px;
+  width: 240px;            /* bigger */
+  height: 240px;           /* keeps consistent square */
+  border-radius: 50%;      /* circular crop */
+  object-fit: cover;       /* avoids distortion */
+  margin: 0 auto 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
