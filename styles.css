@@ -117,12 +117,15 @@ a,
   border-color: rgba(255,255,255,0.2);
 }
 
-
 .card img {
-  width: 240px;            /* bigger */
-  height: 240px;           /* keeps consistent square */
-  border-radius: 50%;      /* circular crop */
-  object-fit: cover;       /* avoids distortion */
+  display: block;
   margin: 0 auto 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  border-radius: 50%;      /* keep it circular */
+  width: 260px;            /* try 260–300px for a strong presence */
+  height: 260px;
+  object-fit: cover;       /* fills the circle without distortion */
+  image-rendering: auto;   /* prevents pixelation from scaling */
+  max-width: 100%;         /* responsive on mobile */
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
 }
+
