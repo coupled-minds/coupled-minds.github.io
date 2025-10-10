@@ -185,3 +185,31 @@ a,
   }
 }
 
+/* --- TAMU logo styles --- */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tam-logo {
+  height: 32px;          /* small and neat in the nav bar */
+  width: auto;
+}
+
+.tam-logo-footer {
+  height: 40px;          /* slightly larger in footer */
+  width: auto;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+/* Adjust layout for small screens */
+@media (max-width: 600px) {
+  .tam-logo {
+    height: 26px;
+  }
+  .tam-logo-footer {
+    height: 32px;
+  }
+}
