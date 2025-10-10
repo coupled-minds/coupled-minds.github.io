@@ -234,45 +234,49 @@ a,
 }
 
 /* --- Contact section with TAMU logo --- */
-/* Contact layout */
-.contact-block{
-  display:flex;
-  align-items:flex-start;   /* prevents tall stretching */
-  justify-content:space-between;
-  gap:24px;
-  flex-wrap:wrap;           /* stack on small screens */
+/* --- Contact section tidy layout --- */
+.contact-block {
+  display: flex;
+  align-items: center;       /* centers logo with text */
+  justify-content: flex-start;
+  gap: 24px;                 /* reduce spacing between text and logo */
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
-.contact-info{
-  flex:1 1 360px;           /* text column */
-  min-width:280px;
+.contact-info {
+  flex: 0 1 auto;
+  min-width: 280px;
 }
 
-.contact-info address{
-  margin:8px 0 0;
-  line-height:1.6;
+.contact-info address {
+  margin: 8px 0 0;
+  line-height: 1.6;
 }
 
-.contact-logo{
-  flex:0 0 auto;            /* logo stays compact */
+.contact-logo {
+  flex: 0 0 auto;
 }
 
-.contact-logo img{
-  height:64px;              /* tune this */
-  width:auto;
-  display:block;
+.contact-logo img {
+  height: 100px;             /* make it bigger */
+  width: auto;
+  display: block;
 }
 
-/* If you ever put Contact in a maroon .section.alt */
-.section.alt .contact-logo img{
-  filter:brightness(0) invert(1);  /* makes dark logo white on maroon */
+/* for maroon background (optional inversion) */
+.section.alt .contact-logo img {
+  filter: brightness(0) invert(1);
 }
 
-/* Mobile stacking */
-@media (max-width:700px){
-  .contact-block{
-    flex-direction:column;
-    align-items:flex-start;
+/* stack neatly on mobile */
+@media (max-width: 700px) {
+  .contact-block {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
   }
-  .contact-logo img{ height:56px; }
+  .contact-logo img {
+    height: 80px;
+  }
 }
