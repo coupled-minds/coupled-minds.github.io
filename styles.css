@@ -239,7 +239,7 @@ a,
   display: flex;
   align-items: center;       /* centers logo with text */
   justify-content: flex-start;
-  gap: 100px;                 /* reduce spacing between text and logo */
+  gap: 130px;                 /* reduce spacing between text and logo */
   flex-wrap: wrap;
   margin-top: 20px;
 }
@@ -259,7 +259,7 @@ a,
 }
 
 .contact-logo img {
-  height: 190px;             /* make it bigger */
+  height: 170px;             /* make it bigger */
   width: auto;
   display: block;
 }
