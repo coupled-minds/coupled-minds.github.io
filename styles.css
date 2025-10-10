@@ -213,3 +213,22 @@ a,
     height: 32px;
   }
 }
+
+/* --- Logo + text together --- */
+.site-header .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-header .brand:hover {
+  text-decoration: underline;
+}
+
+.tam-logo {
+  height: 28px; /* small enough to sit inline */
+  width: auto;
+}
