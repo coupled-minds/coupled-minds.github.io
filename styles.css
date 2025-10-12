@@ -28,7 +28,13 @@ a:hover{text-decoration:underline}
 .section{padding:56px 0;border-top:1px solid var(--line)}
 .section.alt{background:var(--alt)}
 .lede{font-size:20px;color:var(--fg);opacity:.9}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:16px;
+  margin-top:16px;
+  justify-content:start;   /* ✅ add this */
+}
 .card{background:var(--card);padding:16px;border:1px solid var(--line);border-radius:16px}
 .pub{padding:12px 0;border-bottom:1px dashed var(--line)}
 .button{display:inline-block;padding:10px 14px;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--brand));color:#0b0b0f;font-weight:700}
