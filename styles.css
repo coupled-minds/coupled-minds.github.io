@@ -136,16 +136,19 @@ a,
 }
 
 /* --- Person card layout --- */
-.card.person {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 20px;
-  max-width: 600px;
-  margin: 0 auto 20px;
+.card.person{
+  display:flex;
+  align-items:center;
+  gap:24px;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:20px;
+
+  /* 🔧 left-align instead of centering */
+  margin:0 0 20px;              /* was likely 0 auto 20px */
+  max-width:none;               /* remove any 600px cap that centers it */
+  width:100%;                   /* fill the column so edges align with text */
 }
 
 /* Circle photo, smaller but left-aligned */
