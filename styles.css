@@ -289,3 +289,24 @@ a,
     height: 80px;
   }
 }
+
+/* Global link clarity */
+a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  color: var(--brand);
+  font-weight: 550;
+}
+a:hover { text-decoration-thickness: 2px; }
+
+/* Links on maroon sections stay high-contrast */
+.section.alt a { color: #ffffff; }
+.section.alt a:hover { color: var(--accent); }
+
+/* Keyboard focus (accessibility) */
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
