@@ -310,3 +310,29 @@ a:focus-visible {
   border-radius: 4px;
 }
 
+/* Prominent button-link */
+.button-link {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: var(--brand);
+  color: #fff !important;
+  text-decoration: none;
+  font-weight: 700;
+  border: 1px solid var(--brand);
+}
+.button-link:hover { background: var(--accent); border-color: var(--accent); }
+
+/* Secondary outlined button (optional) */
+.button-outline {
+  display:inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1.5px solid var(--brand);
+  color: var(--brand);
+  background: transparent;
+  text-decoration: none;
+  font-weight: 650;
+}
+.section.alt .button-outline { border-color:#fff; color:#fff; }
+.section.alt .button-outline:hover { color: var(--accent); border-color: var(--accent); }
