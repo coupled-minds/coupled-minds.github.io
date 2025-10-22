@@ -372,7 +372,7 @@ a[target="_blank"]::after {
   overflow: hidden;
   min-height: 360px;
   padding-top: clamp(2rem, 5vw, 4rem);
-  padding-bottom: clamp(2rem, 6vw, 5rem);
+  padding-bottom: 0rem;  /* adjust to taste: 3rem–6rem works well visually */
 }
 
 /* Keep your hero text centered & above the image */
