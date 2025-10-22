@@ -379,6 +379,7 @@ a[target="_blank"]::after {
 /* Keep your hero text centered & above the image */
 .hero-content {
   position: relative;
+  display: inline-block; /* also safe to add even if not there */
   z-index: 1;
   text-align: center;
   /* Make room on the right so the badge doesn’t overlap the title on wide screens */
@@ -388,14 +389,13 @@ a[target="_blank"]::after {
 /* The big right-side badge */
 .hero-mark {
   position: absolute;
-  right: clamp(0rem, 1vw, 2rem);
-  bottom: 4%;  /* sits right against the section edge — tweak this value */
-  transform: none; /* remove translateY — no longer needed */
-  max-width: 50%;
-  height: auto;
-  max-height: 90%;
-  opacity: 0.95;
+  left: 100%;                /* attach horizontally to right edge of text */
+  bottom: 5%;               /* anchor to bottom of hero (you can change -5% to 0%, -3%, etc.) */
+  transform: translateX(1rem);   /* horizontal spacing from the title */
+  max-height: 90%;           /* adjust as needed */
+  width: auto;
   pointer-events: none;
+  opacity: 0.95;
 }
 
 /* Fine-tune the title to keep its baseline clean */
