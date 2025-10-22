@@ -446,7 +446,7 @@ a[target="_blank"]::after {
   max-height: none !important;     /* <-- removes the old 80% ceiling */
   max-width: none !important;
   border-radius: 0 !important;
-
+  pointer-events: none !important; 
   height: 80% !important;          /* try 85–100% to taste */
   width: auto !important;
   opacity: 0.95;
