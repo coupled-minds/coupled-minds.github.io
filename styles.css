@@ -400,7 +400,7 @@ a[target="_blank"]::after {
   left: 50%;
   transform: translateX(-50%);
   margin: 0;                 /* no extra spacing */
-  max-height: 220px;         /* adjust size to taste */
+  max-height: 340px;         /* adjust size to taste */
   width: auto;
   display: block;
   opacity: 0.95;
