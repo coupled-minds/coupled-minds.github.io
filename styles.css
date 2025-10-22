@@ -377,10 +377,9 @@ a[target="_blank"]::after {
 
 /* Keep your hero text centered & above the image */
 .hero-content {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  padding-right: 0; /* no artificial padding; JS will place the badge */
+  display: flex;
+  flex-direction: column;   /* ⬅️ forces vertical stacking */
+  align-items: center;      /* keeps everything centered */
 }
 
 /* The big right-side badge */
