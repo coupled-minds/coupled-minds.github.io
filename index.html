@@ -223,5 +223,23 @@
     });
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
+  <script>
+  function placeHeroMark() {
+    var hero = document.querySelector('.hero');
+    var title = document.getElementById('heroTitle');
+    var mark  = document.querySelector('.hero-mark');
+    if (!hero || !title || !mark) return;
+
+    var heroRect  = hero.getBoundingClientRect();
+    var titleRect = title.getBoundingClientRect();
+    var leftWithinHero = (titleRect.right - heroRect.left);
+
+    mark.style.left = leftWithinHero + 'px';
+  }
+
+  placeHeroMark();
+  window.addEventListener('resize', placeHeroMark);
+</script>
+
 </body>
 </html>
