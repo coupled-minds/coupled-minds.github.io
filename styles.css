@@ -427,27 +427,26 @@ a[target="_blank"]::after {
 
 
 /* --- HERO FINAL OVERRIDES --- */
+/* FINAL: make the hero tall and remove height caps on the logo */
 .hero {
-  /* give the hero enough height so the logo can be big */
-  min-height: 700px;
-  position: relative; /* already set above, but safe here */
-  padding-bottom: 0;  /* keep the logo touching the section line */
-}
-
-.hero-content .cta { 
-  margin-bottom: 1rem; /* avoid overlap with the bigger logo */
+  min-height: 800px !important;   /* bump as high as you want */
+  position: relative;
+  padding-bottom: 0;
 }
 
 .hero-logo-centered {
   position: absolute;
-  bottom: 0; 
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
 
-  /* Make it BIG and ignore earlier global img rules */
-  height: 85% !important;  /* <- increase these numbers if you want even bigger */
-  width: auto;
+  /* kill earlier caps & scale by hero height */
+  max-height: none !important;     /* <-- removes the old 80% ceiling */
   max-width: none !important;
-  border-radius: 0 !important;   /* overrides the global img { border-radius:12px } */
+  border-radius: 0 !important;
+
+  height: 90% !important;          /* try 85–100% to taste */
+  width: auto !important;
   opacity: 0.95;
 }
+
