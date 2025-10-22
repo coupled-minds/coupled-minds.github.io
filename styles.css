@@ -389,7 +389,7 @@ a[target="_blank"]::after {
 .hero-mark {
   position: absolute;
   right: clamp(0rem, 1vw, 2rem); /* now it sits VERY close to the title */
-  top: 45%;
+  top: 50%;
   transform: translateY(-50%);
   max-width: 50%;
   height: auto;
