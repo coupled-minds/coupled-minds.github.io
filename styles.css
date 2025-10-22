@@ -390,7 +390,7 @@ a[target="_blank"]::after {
 .hero-mark {
   position: absolute;
   left: 100%;                /* attach horizontally to right edge of text */
-  bottom: 5%;               /* anchor to bottom of hero (you can change -5% to 0%, -3%, etc.) */
+  bottom: -1%;               /* anchor to bottom of hero (you can change -5% to 0%, -3%, etc.) */
   transform: translateX(1rem);   /* horizontal spacing from the title */
   max-height: 90%;           /* adjust as needed */
   width: auto;
