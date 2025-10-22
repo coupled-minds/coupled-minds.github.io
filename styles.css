@@ -48,26 +48,27 @@ a:hover{text-decoration-thickness:2px}
 
 /* ============ Hero ============ */
 .hero{
-  position:relative;
-  overflow:visible;
-  background:var(--bg);
-  color:var(--fg);
-  padding-top:clamp(2rem,5vw,4rem);
-  padding-bottom: calc(var(--heroLogoH) - var(--heroOverlap));
-  min-height:500px;
+  position: relative;
+  background: var(--bg) url("/assets/img/CML-1022.svg") no-repeat center bottom;
+  /* Choose ONE of these two lines based on how you want it to fit: */
+  background-size: cover;        /* fills hero, may crop sides */
+  /* background-size: auto 100%; */ /* spans full hero height, never crops (comment out 'cover' if you use this) */
+
+  /* spacing for the content, not for the image */
+  padding-top: clamp(2rem, 5vw, 4rem);
+  padding-bottom: 2rem;
+  min-height: 520px; /* adjust to taste */
+  overflow: hidden;  /* keeps background clean at the seam */
 }
+
 .hero h1{font-size:42px;line-height:1.15;margin:0 0 8px}
 .affil{color:var(--muted);margin:0 0 20px}
 
 /* Stack hero content and center */
 .hero-content{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  text-align:center;
-  position:relative;
-  z-index:2;
-  padding-bottom: calc(var(--heroLogoH) + 40px);
+  position: relative;
+  z-index: 1;
+  text-align: center;
 }
 
 /* CTA button */
@@ -76,16 +77,27 @@ a:hover{text-decoration-thickness:2px}
 
 /* The centered logo that sits on the section line */
 .hero-logo-centered{
-  position:absolute;
-  left:50%;
-  bottom: calc(0px - var(--heroOverlap));
-  transform: translateX(-50%);           /* no Y translate */
-  height: var(--heroLogoH) !important;
-  width: auto !important;
-  display:block;                          /* belt-and-suspenders for replaced elements */
-  pointer-events:none !important;         /* never block the button/link */
+  display: none !important;
 }
 
+.hero::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(255,255,255,0.85) 0%,
+    rgba(255,255,255,0.55) 40%,
+    rgba(255,255,255,0) 75%
+  );
+  z-index: 0;
+}
+
+.hero .button{
+  position: relative;
+  z-index: 2;
+  margin-top: 12px;
+}
 
 /* ============ Sections ============ */
 .section{padding:56px 0;border-top:1px solid var(--line)}
@@ -151,4 +163,13 @@ a:hover{text-decoration-thickness:2px}
   .card.person{flex-direction:column;text-align:center}
   .card.person .portrait{width:180px;height:180px;margin-bottom:12px}
   .hero{min-height:420px}
+}
+
+@media (max-width: 600px){
+  .hero{
+    /* prefer full image visibility on small screens */
+    background-size: contain;
+    background-position: center bottom;
+    min-height: 420px;
+  }
 }
