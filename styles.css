@@ -380,6 +380,8 @@ a[target="_blank"]::after {
   display: flex;
   flex-direction: column;   /* ⬅️ forces vertical stacking */
   align-items: center;      /* keeps everything centered */
+  padding-bottom: 200px !important;  /* gives room above the logo */
+
 }
 
 /* The big right-side badge */
