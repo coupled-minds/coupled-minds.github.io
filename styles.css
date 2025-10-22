@@ -388,10 +388,10 @@ a[target="_blank"]::after {
 /* The big right-side badge */
 .hero-mark {
   position: absolute;
-  right: clamp(4rem, 8vw, 10rem); /* moved LEFT by increasing right offset */
-  top: 45%; /* slightly above exact center */
+  right: clamp(8rem, 10vw, 10rem); /* moved LEFT by increasing right offset */
+  top: 40%; /* slightly above exact center */
   transform: translateY(-50%);
-  max-width: 50%;   /* slightly bigger */
+  max-width: 55%;   /* slightly bigger */
   height: auto;
   max-height: 85%;  /* allow taller */
   opacity: 0.95;
