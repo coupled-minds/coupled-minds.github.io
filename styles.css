@@ -445,7 +445,7 @@ a[target="_blank"]::after {
   max-width: none !important;
   border-radius: 0 !important;
 
-  height: 90% !important;          /* try 85–100% to taste */
+  height: 80% !important;          /* try 85–100% to taste */
   width: auto !important;
   opacity: 0.95;
 }
