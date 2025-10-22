@@ -369,8 +369,7 @@ a[target="_blank"]::after {
 /* Ensure hero can anchor absolute children */
 .hero {
   position: relative;
-  overflow: hidden; /* keeps oversized art from spilling */
-  /* optional: enforce a nice hero height */
+  overflow: hidden;
   min-height: 360px;
   padding-top: clamp(2rem, 5vw, 4rem);
   padding-bottom: clamp(2rem, 6vw, 5rem);
@@ -379,29 +378,26 @@ a[target="_blank"]::after {
 /* Keep your hero text centered & above the image */
 .hero-content {
   position: relative;
-  display: inline-block; /* also safe to add even if not there */
   z-index: 1;
   text-align: center;
-  /* Make room on the right so the badge doesn’t overlap the title on wide screens */
-  padding-right: clamp(6rem, 24vw, 28rem);
+  padding-right: 0; /* no artificial padding; JS will place the badge */
 }
 
 /* The big right-side badge */
 .hero-mark {
   position: absolute;
-  left: 100%;                /* attach horizontally to right edge of text */
-  bottom: -1%;               /* anchor to bottom of hero (you can change -5% to 0%, -3%, etc.) */
-  transform: translateX(1rem);   /* horizontal spacing from the title */
-  max-height: 90%;           /* adjust as needed */
+  bottom: -2%;      /* 0% hugs the line; negative overlaps a bit into next section */
+  left: 0;          /* placeholder; JS will update this */
+  transform: translateX(1rem);  /* gap from the title’s right edge */
+  max-height: 85%;  /* tall but not overwhelming */
   width: auto;
   pointer-events: none;
   opacity: 0.95;
 }
 
 /* Fine-tune the title to keep its baseline clean */
-.hero h1 {
-  margin: 0 0 0.5rem 0;
-}
+.hero h1 { margin: 0 0 0.5rem 0; }
+
 
 /* Responsive: on smaller screens, shrink or hide the badge and reduce the padding-right */
 @media (max-width: 900px) {
@@ -416,10 +412,5 @@ a[target="_blank"]::after {
 }
 
 @media (max-width: 560px) {
-  .hero-content {
-    padding-right: 0; /* let text take full width on phones */
-  }
-  .hero-mark {
-    display: none;   /* or keep it tiny if you prefer */
-  }
+  .hero-mark { display: none; }
 }
