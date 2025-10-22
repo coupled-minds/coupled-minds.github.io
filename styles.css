@@ -395,6 +395,16 @@ a[target="_blank"]::after {
   opacity: 0.95;
 }
 
+.hero-logo-centered {
+  margin-top: 2rem;   /* spacing from the button */
+  max-height: 200px;  /* size — adjust up/down as you like */
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; /* centers it */
+  opacity: 0.95;       /* optional, modern touch */
+}
+
 /* Fine-tune the title to keep its baseline clean */
 .hero h1 { margin: 0 0 0.5rem 0; }
 
