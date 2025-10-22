@@ -429,7 +429,7 @@ a[target="_blank"]::after {
 /* --- HERO FINAL OVERRIDES --- */
 /* FINAL: make the hero tall and remove height caps on the logo */
 .hero {
-  min-height: 800px !important;   /* bump as high as you want */
+  min-height: 600px !important;   /* bump as high as you want */
   position: relative;
   padding-bottom: 0;
 }
