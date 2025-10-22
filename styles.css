@@ -12,6 +12,7 @@
 
   /* hero tuning */
   --heroLogoH: 300px;   /* fixed pixel height for logo */
+  --heroOverlap: 6px; /* pull image down a hair to guarantee seam contact */
 }
 
 /* ============ Base ============ */
@@ -52,7 +53,7 @@ a:hover{text-decoration-thickness:2px}
   background:var(--bg);
   color:var(--fg);
   padding-top:clamp(2rem,5vw,4rem);
-  padding-bottom: var(--heroLogoH); /* was: calc(var(--heroLogoH) / 2) */
+  padding-bottom: calc(var(--heroLogoH) - var(--heroOverlap));
   min-height:500px;
 }
 .hero h1{font-size:42px;line-height:1.15;margin:0 0 8px}
@@ -66,7 +67,7 @@ a:hover{text-decoration-thickness:2px}
   text-align:center;
   position:relative;
   z-index:2;
-  padding-bottom:2rem;
+  padding-bottom: calc(var(--heroLogoH) + 40px);
 }
 
 /* CTA button */
@@ -76,17 +77,15 @@ a:hover{text-decoration-thickness:2px}
 /* The centered logo that sits on the section line */
 .hero-logo-centered{
   position:absolute;
-  bottom:0;
   left:50%;
-  transform: translateX(-50%);       /* was: translate(-50%, 50%) */
-  height:var(--heroLogoH) !important;
-  width:auto !important;
-  max-width:none !important;
-  border-radius:0 !important;
-  pointer-events:none !important;
-  opacity:.95;
-  z-index:1;
+  bottom: calc(0px - var(--heroOverlap));
+  transform: translateX(-50%);           /* no Y translate */
+  height: var(--heroLogoH) !important;
+  width: auto !important;
+  display:block;                          /* belt-and-suspenders for replaced elements */
+  pointer-events:none !important;         /* never block the button/link */
 }
+
 
 /* ============ Sections ============ */
 .section{padding:56px 0;border-top:1px solid var(--line)}
