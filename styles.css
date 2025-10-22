@@ -46,7 +46,7 @@ a:hover{text-decoration-thickness:2px}
 .hero{
   position: relative;
   background: url("/assets/img/CML-1022.svg") no-repeat center bottom;
-  background-size: contain;       /* or: cover  (fills fully, but may crop sides) */
+  background-size: 70%;       /* or: cover  (fills fully, but may crop sides) */
   padding-top: clamp(2rem, 5vw, 4rem);
   padding-bottom: 4rem;           /* keeps button comfortably clear of bottom */
   min-height: 520px;              /* adjust if desired */
