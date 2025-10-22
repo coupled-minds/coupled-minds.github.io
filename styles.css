@@ -391,12 +391,11 @@ a[target="_blank"]::after {
   right: clamp(1rem, 4vw, 3rem);
   top: 50%;
   transform: translateY(-50%);
-  /* Make it tall: nearly the full hero height, with breathing room */
-  height: calc(100% - clamp(2rem, 8vw, 6rem));
-  width: auto;
-  max-height: 560px;        /* safety stop so it doesn't get ridiculous */
-  opacity: 0.95;            /* optional: feels polished on SVG/PNG */
-  pointer-events: none;     /* decorative, so clicks pass through */
+  max-width: 40%;   /* this is key — prevents it from blowing up */
+  height: auto;
+  max-height: 80%;  /* still lets it be tall, but never overwhelming */
+  opacity: 0.95;
+  pointer-events: none;
 }
 
 /* Fine-tune the title to keep its baseline clean */
