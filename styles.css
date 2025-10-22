@@ -11,7 +11,7 @@
   --max:900px;
 
   /* hero tuning */
-  --heroLogoH: 85%;   /* ← logo height as % of hero height (try 80–95%) */
+  --heroLogoH: 38vh;   /* ← logo height as % of hero height (try 80–95%) */
 }
 
 /* ============ Base ============ */
@@ -62,9 +62,13 @@ a:hover{text-decoration-thickness:2px}
 
 /* Stack hero content and center */
 .hero-content{
-  display:flex;flex-direction:column;align-items:center;text-align:center;
-  /* Space so text never collides with bottom logo */
-  padding-bottom:200px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  position:relative;
+  z-index:2;                              /* above the logo */
+  padding-bottom:clamp(240px, 24vh, 380px); /* avoids overlap with the logo */
 }
 
 /* CTA button */
@@ -73,12 +77,17 @@ a:hover{text-decoration-thickness:2px}
 
 /* The centered logo that sits on the section line */
 .hero-logo-centered{
-  position:absolute;bottom:0;left:50%;transform:translateX(-50%);
-  height:var(--heroLogoH);
-  width:auto;max-width:none;
-  border-radius:0;                 /* ignore global img rounding */
-  pointer-events:none;             /* never block clicks */
+  position:absolute;
+  bottom:0;
+  left:50%;
+  transform:translateX(-50%);
+  height:var(--heroLogoH) !important;     /* vh-based = always works */
+  width:auto !important;
+  max-width:none !important;
+  border-radius:0 !important;              /* ignore global img rounding */
+  pointer-events:none !important;          /* never blocks the CTA */
   opacity:.95;
+  z-index:1;                               /* behind the text */
 }
 
 /* ============ Sections ============ */
