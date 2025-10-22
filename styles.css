@@ -348,3 +348,20 @@ a[target="_blank"]::after {
 
 .site-header .nav a { font-weight: 600; text-decoration: none; }
 .site-header .nav a:hover { text-decoration: underline; }
+
+
+.hero-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* spacing between title and icon */
+  justify-content: center; /* keeps it centered */
+}
+
+.hero-title-wrap h1 {
+  margin: 0;
+}
+
+.hero-icon {
+  height: 60px;    /* adjust to taste — match visual weight, not pixel height */
+  width: auto;
+}
