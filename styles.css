@@ -365,3 +365,62 @@ a[target="_blank"]::after {
   height: 60px;    /* adjust to taste — match visual weight, not pixel height */
   width: auto;
 }
+
+/* Ensure hero can anchor absolute children */
+.hero {
+  position: relative;
+  overflow: hidden; /* keeps oversized art from spilling */
+  /* optional: enforce a nice hero height */
+  min-height: 360px;
+  padding-top: clamp(2rem, 5vw, 4rem);
+  padding-bottom: clamp(2rem, 6vw, 5rem);
+}
+
+/* Keep your hero text centered & above the image */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  /* Make room on the right so the badge doesn’t overlap the title on wide screens */
+  padding-right: clamp(6rem, 24vw, 28rem);
+}
+
+/* The big right-side badge */
+.hero-mark {
+  position: absolute;
+  right: clamp(1rem, 4vw, 3rem);
+  top: 50%;
+  transform: translateY(-50%);
+  /* Make it tall: nearly the full hero height, with breathing room */
+  height: calc(100% - clamp(2rem, 8vw, 6rem));
+  width: auto;
+  max-height: 560px;        /* safety stop so it doesn't get ridiculous */
+  opacity: 0.95;            /* optional: feels polished on SVG/PNG */
+  pointer-events: none;     /* decorative, so clicks pass through */
+}
+
+/* Fine-tune the title to keep its baseline clean */
+.hero h1 {
+  margin: 0 0 0.5rem 0;
+}
+
+/* Responsive: on smaller screens, shrink or hide the badge and reduce the padding-right */
+@media (max-width: 900px) {
+  .hero-content {
+    padding-right: clamp(2rem, 8vw, 6rem);
+  }
+  .hero-mark {
+    height: clamp(110px, 22vw, 180px);
+    right: 1rem;
+    opacity: 0.9;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-content {
+    padding-right: 0; /* let text take full width on phones */
+  }
+  .hero-mark {
+    display: none;   /* or keep it tiny if you prefer */
+  }
+}
