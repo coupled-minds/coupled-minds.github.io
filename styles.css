@@ -424,3 +424,30 @@ a[target="_blank"]::after {
 @media (max-width: 560px) {
   .hero-mark { display: none; }
 }
+
+
+/* --- HERO FINAL OVERRIDES --- */
+.hero {
+  /* give the hero enough height so the logo can be big */
+  min-height: clamp(480px, 42vw, 720px);
+  position: relative; /* already set above, but safe here */
+  padding-bottom: 0;  /* keep the logo touching the section line */
+}
+
+.hero-content .cta { 
+  margin-bottom: 1rem; /* avoid overlap with the bigger logo */
+}
+
+.hero-logo-centered {
+  position: absolute;
+  bottom: 0; 
+  left: 50%;
+  transform: translateX(-50%);
+
+  /* Make it BIG and ignore earlier global img rules */
+  height: clamp(280px, 26vw, 580px) !important;  /* <- increase these numbers if you want even bigger */
+  width: auto;
+  max-width: none !important;
+  border-radius: 0 !important;   /* overrides the global img { border-radius:12px } */
+  opacity: 0.95;
+}
