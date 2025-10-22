@@ -389,7 +389,7 @@ a[target="_blank"]::after {
 .hero-mark {
   position: absolute;
   right: clamp(0rem, 1vw, 2rem);
-  bottom: -5%;  /* sits right against the section edge — tweak this value */
+  bottom: 0%;  /* sits right against the section edge — tweak this value */
   transform: none; /* remove translateY — no longer needed */
   max-width: 50%;
   height: auto;
