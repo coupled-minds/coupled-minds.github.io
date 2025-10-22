@@ -9,10 +9,6 @@
   --alt:#f3f3f3;
   --line:#dddddd;
   --max:900px;
-
-  /* hero tuning */
-  --heroLogoH: 300px;   /* fixed pixel height for logo */
-  --heroOverlap: 6px; /* pull image down a hair to guarantee seam contact */
 }
 
 /* ============ Base ============ */
@@ -49,16 +45,11 @@ a:hover{text-decoration-thickness:2px}
 /* ============ Hero ============ */
 .hero{
   position: relative;
-  background: var(--bg) url("/assets/img/CML-1022.svg") no-repeat center bottom;
-  /* Choose ONE of these two lines based on how you want it to fit: */
-  background-size: cover;        /* fills hero, may crop sides */
-  /* background-size: auto 100%; */ /* spans full hero height, never crops (comment out 'cover' if you use this) */
-
-  /* spacing for the content, not for the image */
+  background: url("/assets/img/CML-1022.svg") no-repeat center bottom;
+  background-size: contain;       /* or: cover  (fills fully, but may crop sides) */
   padding-top: clamp(2rem, 5vw, 4rem);
-  padding-bottom: 2rem;
-  min-height: 520px; /* adjust to taste */
-  overflow: hidden;  /* keeps background clean at the seam */
+  padding-bottom: 4rem;           /* keeps button comfortably clear of bottom */
+  min-height: 520px;              /* adjust if desired */
 }
 
 .hero h1{font-size:42px;line-height:1.15;margin:0 0 8px}
@@ -67,7 +58,7 @@ a:hover{text-decoration-thickness:2px}
 /* Stack hero content and center */
 .hero-content{
   position: relative;
-  z-index: 1;
+  z-index: 2;
   text-align: center;
 }
 
@@ -80,24 +71,6 @@ a:hover{text-decoration-thickness:2px}
   display: none !important;
 }
 
-.hero::before{
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(255,255,255,0.85) 0%,
-    rgba(255,255,255,0.55) 40%,
-    rgba(255,255,255,0) 75%
-  );
-  z-index: 0;
-}
-
-.hero .button{
-  position: relative;
-  z-index: 2;
-  margin-top: 12px;
-}
 
 /* ============ Sections ============ */
 .section{padding:56px 0;border-top:1px solid var(--line)}
