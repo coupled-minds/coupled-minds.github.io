@@ -429,7 +429,7 @@ a[target="_blank"]::after {
 /* --- HERO FINAL OVERRIDES --- */
 .hero {
   /* give the hero enough height so the logo can be big */
-  min-height: clamp(480px, 42vw, 720px);
+  min-height: clamp(600px, 42vw, 720px);
   position: relative; /* already set above, but safe here */
   padding-bottom: 0;  /* keep the logo touching the section line */
 }
@@ -445,7 +445,7 @@ a[target="_blank"]::after {
   transform: translateX(-50%);
 
   /* Make it BIG and ignore earlier global img rules */
-  height: clamp(280px, 26vw, 580px) !important;  /* <- increase these numbers if you want even bigger */
+  height: 85% !important;  /* <- increase these numbers if you want even bigger */
   width: auto;
   max-width: none !important;
   border-radius: 0 !important;   /* overrides the global img { border-radius:12px } */
