@@ -147,3 +147,38 @@ a:hover{text-decoration-thickness:2px}
   }
 }
 
+
+
+/* === FINAL, HARD OVERRIDES === */
+.hero{
+  position: relative;                 /* ensure pseudo-elements position correctly */
+  min-height: 520px;                  /* keep the section tall enough to see bg */
+  background-color: var(--bg);        /* keep your white page background */
+
+  /* Set background image with longhand so nothing gets reset by accident */
+  background-image: url("/assets/img/CML-1022.svg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 70% auto;          /* <— adjust this number to change size */
+}
+
+/* Hide the old inline img so it doesn't sit on top of text */
+.hero-logo-centered{ display: none !important; }
+
+/* (Optional) readability veil — won’t block clicks */
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index:0;                          /* stays under text */
+  background: linear-gradient(
+    to top,
+    rgba(255,255,255,0.88) 0%,
+    rgba(255,255,255,0.60) 40%,
+    rgba(255,255,255,0.00) 75%
+  );
+}
+
+/* Keep text/buttons above */
+.hero-content{ position: relative; z-index: 1; }
