@@ -171,12 +171,12 @@ a:hover{text-decoration-thickness:2px}
   position:absolute;
   inset:0;
   pointer-events:none;
-  z-index:1; /* UNDER text */
+  z-index:1; /* sits between bg and text */
   background: linear-gradient(
     to top,
-    rgba(255,255,255,0.85)  0%,    /* fully visible/bold INCREASE visibility bottom */
-    rgba(255,255,255,0.30)  50%,   /* mid fade */
-    rgba(255,255,255,0.00) 100%    /* fully transparent at top */
+    rgba(255,255,255,0.00) 0%,    /* bottom: no veil */
+    rgba(255,255,255,0.40) 45%,   /* mid: gentle lift */
+    rgba(255,255,255,0.80) 100%   /* top: strongest fade */
   );
 }
 .hero-content{
