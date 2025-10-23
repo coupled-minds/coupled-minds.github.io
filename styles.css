@@ -159,7 +159,7 @@ a:hover{text-decoration-thickness:2px}
   background-image: url("/assets/img/CML-1022.svg");
   background-repeat: no-repeat;
   background-position: center bottom;
-  background-size: 70% auto;          /* <— adjust this number to change size */
+  background-size: 50% auto;          /* <— adjust this number to change size */
 }
 
 /* Hide the old inline img so it doesn't sit on top of text */
@@ -171,12 +171,12 @@ a:hover{text-decoration-thickness:2px}
   position:absolute;
   inset:0;
   pointer-events:none;
-  z-index:0;                          /* stays under text */
+  z-index:1; /* under text */
   background: linear-gradient(
-    to top,
-    rgba(255,255,255,0.88) 0%,
-    rgba(255,255,255,0.60) 40%,
-    rgba(255,255,255,0.00) 75%
+    to bottom,
+    rgba(255,255,255,0.00) 0%,   /* top: clear */
+    rgba(255,255,255,0.55) 40%,  /* mid: soft */
+    rgba(255,255,255,0.88) 100%  /* bottom: strongest */
   );
 }
 
