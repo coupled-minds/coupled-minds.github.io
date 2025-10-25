@@ -188,3 +188,14 @@ a:hover{text-decoration-thickness:2px}
   color: #000 !important;
   font-weight: 500; /* optional: adds clarity */
 }
+
+/* Phone tweaks: make the image bigger and trim the bottom gap */
+@media (max-width: 700px){
+  .hero{
+    /* Nudge above iOS safe-area if needed */
+    background-position: center calc(100% - max(10px, env(safe-area-inset-bottom)));
+    background-size: clamp(420px, 90vw, 720px) auto;
+    min-height: 420px;
+    padding-bottom: 1.75rem;
+  }
+}
